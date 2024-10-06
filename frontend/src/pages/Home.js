@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { useNavigate } from "react-router-dom";
-import '../CssPage/HomePage.css'; // Import the CSS file
+import { useNavigate, Link } from "react-router-dom"; // Added Link import
+import '../CssPage/HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -14,17 +14,17 @@ const HomePage = () => {
     <div className="homepage-container">
       <Carousel controls={true} indicators={true} interval={3000} className="mb-5">
         <Carousel.Item>
-          <div className="carousel-item-custom" style={{ backgroundImage: 'url("https://via.placeholder.com/1920x1080/FF5733/FFFFFF?text=Welcome+to+PopcornBox")' }}>
+          <div className="carousel-item-custom" style={{ backgroundImage: "url('/images/img1.jpg')" }}>
             <h1 className="carousel-text">Welcome to PopcornBox</h1>
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="carousel-item-custom" style={{ backgroundImage: 'url("https://via.placeholder.com/1920x1080/33FF57/FFFFFF?text=Discover+Your+Favorite+Movies")' }}>
+          <div className="carousel-item-custom" style={{ backgroundImage: "url('/images/img2.jpg')" }}>
             <h1 className="carousel-text">Discover Your Favorite Movies</h1>
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="carousel-item-custom" style={{ backgroundImage: 'url("https://via.placeholder.com/1920x1080/3357FF/FFFFFF?text=Enjoy+Unlimited+Entertainment")' }}>
+          <div className="carousel-item-custom" style={{ backgroundImage: "url('/images/img3.jpg')" }}>
             <h1 className="carousel-text">Enjoy Unlimited Entertainment</h1>
           </div>
         </Carousel.Item>
@@ -35,9 +35,11 @@ const HomePage = () => {
           Discover a wide collection of the best movies. Explore now to find out what's trending!
         </p>
         <div className="text-center mt-4">
-          <button className="explore-btn" onClick={handleExplore}>
-            Explore Movies
-          </button>
+          <Link to="/movies">
+            <button className="explore-btn">
+              Explore Movies
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -50,15 +52,15 @@ const HomePage = () => {
             </div>
             <div className="col-md-4">
               <h5>Contact Us</h5>
-              <p>Email: contact@popcornbox.com</p>
-              <p>Phone: +123 456 7890</p>
+              <p>Email: sadek.mandhouj04@gmail.com</p>
+              <p>Phone: +216 52231427 </p>
             </div>
             <div className="col-md-4">
               <h5>Follow Us</h5>
               <p>Stay connected via social media.</p>
               <p>
-                <a href="#" className="text-light">Facebook</a> | 
-                <a href="#" className="text-light"> Instagram</a> | 
+                <a href="#" className="text-light">Facebook</a> |
+                <a href="#" className="text-light"> Instagram</a> |
                 <a href="#" className="text-light"> LinkedIn</a>
               </p>
             </div>
