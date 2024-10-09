@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../CssPage/Moviecard.css'; // Assume you have a CSS file for styling
+import StarRatingComponent from 'react-star-rating-component';
+import '../CssPage/Moviecard.css';
 
 const MovieCard = ({ movie }) => {
   return (
@@ -9,11 +10,29 @@ const MovieCard = ({ movie }) => {
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <p>{movie.description}</p>
-        <div className="movie-rating">Rating: {movie.rating} / 5</div>
-        <Link to={`/trailer/${movie.id}`} className="watch-trailer-link">
-          Watch Trailer
+
+        
+      </div>
+      <div>
+      <div className="text-center display-6">
+          <StarRatingComponent
+            name={"rating"}
+            value={movie.rating}
+          />
+        </div>
+
+      
+      <div className="text-center mt-3">
+        <Link to={`/moviedetails/${movie.id}`}>
+          <button className="watch-trailer-btn">
+            Watch Trailer
+          </button>
         </Link>
       </div>
+      </div>
+
+
+
     </div>
   );
 };

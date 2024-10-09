@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../redux/slices/auth.slice";
+import '../CssPage/Login.css';
+
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -58,8 +60,8 @@ const Login = () => {
             </a>
           </div>
           <div className="card card-md">
-            <div className="card-body">
-              <h2 className="h2 text-center mb-4">Login to your account</h2>
+            <div className="card-body  ">
+              <h2 className="h2 text-center mb-4 title-color">Login to your account</h2>
               {error && (
                 <div className="alert alert-danger" role="alert">
                   <div className="d-flex">
@@ -92,7 +94,7 @@ const Login = () => {
               )}
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label className="form-label">Email address</label>
+                  <label className="form-label label-red">Email address</label>
                   <input
                     type="email"
                     name="email"
@@ -104,7 +106,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="mb-2">
-                  <label className="form-label">Password</label>
+                  <label className="form-label   label-red ">Password</label>
                   <div className="input-group input-group-flat">
                     <input
                       type={showPassword ? "text" : "password"}
@@ -143,8 +145,9 @@ const Login = () => {
                   </div>
                 </div>
                 <button
-                  className="btn btn-primary w-100"
+                  className="btn btn-primary w-100 "
                   type="submit"
+                  style={{ backgroundColor: "red", borderColor: "red" }}
                   disabled={isLoading}
                 >
                   {isLoading ? "Loading..." : "Login"}
@@ -152,7 +155,7 @@ const Login = () => {
               </form>
             </div>
           </div>
-          <div className="text-center text-secondary mt-3">
+          <div  className="text-center text-secondary mt-3 text-color red">
             Don't have an account yet?{" "}
             <a href="/register" tabIndex={-1}>
               Sign up

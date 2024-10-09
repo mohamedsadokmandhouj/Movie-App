@@ -27,7 +27,7 @@ const ContactPage = () => {
       }}
     >
       <Container className="py-5 fw-bold text-center  ">
-        <h1 className="mb-4 text-light">Contact</h1>
+        <h1 className="title ">Contact</h1>
 
         <Alert variant="info" className="contact-info">
           If you have any problems, questions, or suggestions, please feel free

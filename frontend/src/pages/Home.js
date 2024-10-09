@@ -1,14 +1,13 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { useNavigate, Link } from "react-router-dom"; // Added Link import
+import { useNavigate, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Import icons
+import { faEnvelope, faPhone, faInfoCircle } from "@fortawesome/free-solid-svg-icons"; // Import solid icons
 import '../CssPage/HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
-
-  const handleExplore = () => {
-    navigate("/movies");
-  };
 
   return (
     <div className="homepage-container">
@@ -47,22 +46,36 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <h5>About Us</h5>
+              <h5>
+                <FontAwesomeIcon icon={faInfoCircle} /> About Us
+              </h5>
               <p>PopcornBox is your go-to platform for streaming the best movies online.</p>
             </div>
             <div className="col-md-4">
-              <h5>Contact Us</h5>
-              <p>Email: sadek.mandhouj04@gmail.com</p>
-              <p>Phone: +216 52231427 </p>
+              <h5>
+                <FontAwesomeIcon icon={faEnvelope} /> Contact Us
+              </h5>
+              <p>
+                <FontAwesomeIcon icon={faEnvelope} /> Email: PopcornBox2024@gmail.com
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faPhone} /> Phone: +216 52231427
+              </p>
             </div>
             <div className="col-md-4">
               <h5>Follow Us</h5>
-              <p>Stay connected via social media.</p>
-              <p>
-                <a href="#" className="text-light">Facebook</a> |
-                <a href="#" className="text-light"> Instagram</a> |
-                <a href="#" className="text-light"> LinkedIn</a>
-              </p>
+              <p>Stay connected via social media:</p>
+              <div className="social-icons">
+                <a href="  https://www.facebook.com/ " className="text-light mx-2">
+                  <FontAwesomeIcon icon={faFacebook} /> Facebook
+                </a>
+                <a href=" https://www.instagram.com/ " className="text-light mx-2">
+                  <FontAwesomeIcon icon={faInstagram} /> Instagram
+                </a>
+                <a href=" https://www.linkedin.com " className="text-light mx-2">
+                  <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+                </a>
+              </div>
             </div>
           </div>
           <div className="text-center mt-3">

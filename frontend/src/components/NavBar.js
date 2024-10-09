@@ -2,30 +2,30 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout, getMe } from "../redux/slices/auth.slice";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import '../CssPage/navbar.css'; // Import CSS
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import '../CssPage/navbar.css'
 
 
 const NavBar = () => {
   const dispatch = useDispatch();
-  const isAuth = useSelector((state) => state.AuthReducer.isAuth);
-  const user = useSelector((state) => state.AuthReducer.user);
+  const isAuth = useSelector((state) => state.AuthReducer.isAuth)
+  const user = useSelector((state) => state.AuthReducer.user)
 
   useEffect(() => {
     if (isAuth) {
-      dispatch(getMe());
+      dispatch(getMe())
     }
-  }, [dispatch, isAuth]);
+  }, [dispatch, isAuth])
 
   return (
     <Navbar expand="lg" className="navbar-custom">
       <div className="container">
         <Navbar.Brand as={Link} to="/">
           <img
-            src="/images/logo2.png" // Path to your logo
+            src="/images/logo2.png" 
            
             className="navbar-logo"
             style={{

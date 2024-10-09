@@ -24,6 +24,7 @@
 
 .carousel-text {
   position: relative;
+  padding-top: 5cm;
   z-index: 2;
   color: #fff;
   font-size: 3rem;
@@ -45,7 +46,7 @@
 
 
 .homepage-explore {
-  background-color: #141414;
+  background-color:#141414;
   padding: 40px 0;
   text-align: center;
 }

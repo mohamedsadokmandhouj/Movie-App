@@ -8,17 +8,17 @@ function Register() {
         
         <form className="card card-md" action="./" method="get" autoComplete="off" noValidate>
           <div className="card-body">
-            <h2 className="card-title text-center mb-4">Create new account</h2>
+            <h2 className="card-title text-center mb-4  title-color ">Create new account</h2>
             <div className="mb-3">
-              <label className="form-label">Name</label>
+              <label className="form-label label-red">Name</label>
               <input type="text" className="form-control" placeholder="Enter name" />
             </div>
             <div className="mb-3">
-              <label className="form-label">Email address</label>
+              <label className="form-label label-red">Email address</label>
               <input type="email" className="form-control" placeholder="Enter email" />
             </div>
             <div className="mb-3">
-              <label className="form-label">Password</label>
+              <label className="form-label label-red">Password</label>
               <div className="input-group input-group-flat">
                 <input type="password" className="form-control" placeholder="Password" autoComplete="off" />
                 <span className="input-group-text">
@@ -34,7 +34,10 @@ function Register() {
                </label>
             </div>
             <div className="form-footer">
-              <button type="submit" className="btn btn-primary w-100">Create new account</button>
+              <button 
+              type="submit"
+              style={{ backgroundColor: "red", borderColor: "red" }}
+               className="btn btn-primary w-100">Create new account</button>
             </div>
           </div>
         </form>
